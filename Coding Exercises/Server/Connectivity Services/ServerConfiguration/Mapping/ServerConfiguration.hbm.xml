@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+				   namespace="Retalix.Jumbo.ConnectivityServices.ServerConfiguration"
+				   assembly="Retalix.Jumbo.ConnectivityServices">
+
+	<class name="ServerConfiguration" table="ServerConfiguration" lazy="false">
+
+		<composite-id>
+			<key-property name="ServerConfigurationId"  column="ServerConfigurationId" type="string"/>
+		</composite-id>
+
+		<property name="ServerConfigurationName" column="ServerConfigurationName" type="string"/>
+		<property name="EntityType" column="EntityType" type="string"/>
+		<property name="EntityParameter" column="EntityParameter" type="string"/>
+		<property name="Value" column="Value" type="string"/>
+	</class>
+
+</hibernate-mapping>

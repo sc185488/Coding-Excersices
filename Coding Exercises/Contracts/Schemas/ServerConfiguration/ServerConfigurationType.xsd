@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+		   xmlns="http://retalix.com/R10/services" 
+		   targetNamespace="http://retalix.com/R10/services" 
+		   elementFormDefault="qualified" 
+		   attributeFormDefault="unqualified">
+	<xs:complexType name="ServerConfigurationType">
+		<xs:sequence>
+			<xs:element name="ServerConfigurationId" type="xs:string" />
+			<xs:element name="ServerConfigurationName" type="xs:string" />
+			<xs:element name="EntityType" type="xs:string" />
+			<xs:element name="EntityParameter" type="xs:string" />
+			<xs:element name="Value" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

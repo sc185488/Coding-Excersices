@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="http://retalix.com/R10/services"
+		   targetNamespace="http://retalix.com/R10/services"
+		   elementFormDefault="qualified"
+		   attributeFormDefault="unqualified">
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/RetalixCommonHeader.xsd"/>
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/ActionTypeCodes.xsd"/>
+	<xs:include schemaLocation="ServerConfigurationType.xsd"/>
+
+	<xs:complexType name="ServerConfigurationMaintenanceRequestType">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="ServerConfiguration" type="ServerConfigurationType" maxOccurs="unbounded"/>
+			<xs:element name="Action" type="ActionTypeCodes" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ServerConfigurationMaintenanceResponseType">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="ServerConfigurationMaintenanceRequest" type="ServerConfigurationMaintenanceRequestType">
+		<xs:annotation>
+			<xs:documentation>
+				Used to add or update a list of Touch point commands. A Command is a function that is performed at a touchpoint. 
+				Each button at the POS terminal is a command. For example, Void, Refund, Enter, OK are all commands. 
+				Commands are predefined in the system and assigned to different states, i.e., No Sale, Sale, or Tender mode, etc. 
+				When using a non touch touchpoint, the user is required to map the hard keys and soft keys to commands. 
+			</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="ServerConfigurationMaintenanceResponse" type="ServerConfigurationMaintenanceResponseType">
+		<xs:annotation>
+			<xs:documentation>The list of touchpoint commands.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+
+</xs:schema>

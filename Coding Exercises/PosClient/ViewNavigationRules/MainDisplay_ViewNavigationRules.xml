@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ViewNavigationRules touchPointType="POS" display="MainDisplay">
+  <StateToViews>
+
+    <State name="CashPaymentMode_Change">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.CashPaymentChangeExtendedViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="EFTVoidWaitingMode">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+					      assemblyName="Retalix.Client.POS.Presentation.Views">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EPSMessageViewModel"
+						    assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels"/>
+      </ToWindow>
+    </State>
+
+    <State name="EFTVoidTenderState">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.EFTVoidTenderViewModel"
+					    assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+						   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.EPSMessageView"
+						   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views"/>
+        <ToSubView regionName="RightRegionTop"
+						   name="Retalix.Client.POS.Presentation.Views.QSR.Views.TenderGroupMenuView"
+						   assemblyName="Retalix.Client.POS.Presentation.Views.QSR"/>
+      </ToView>
+    </State>
+
+    <State name="PersonalAccountEFTVoidTenderState">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.PersonalAccountEFTVoidTenderViewModel"
+					    assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+						   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.EPSMessageView"
+						   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views"/>
+        <ToSubView regionName="RightRegionTop"
+						   name="Retalix.Client.POS.Presentation.Views.QSR.Views.TenderGroupMenuView"
+						   assemblyName="Retalix.Client.POS.Presentation.Views.QSR"/>
+      </ToView>
+    </State>
+
+    <State name="WelcomeScreenForgotPasswordScreen">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.RegionContainerViews.PosLoginRegionContainerView"
+              viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+              name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.WelcomeScreenForgotPasswordViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="SubViewBottom"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.UCLoginLoadingAnimation"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="SubViewTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.PosDetailsViewLogin"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="WelcomeScreen">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.RegionContainerViews.PosLoginRegionContainerView"
+              viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+              name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.WelcomeScreenViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="SubViewBottom"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.UCLoginLoadingAnimation"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="SubViewTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.PosDetailsViewLogin"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="EftRecoveryRefundCanceledByErrorState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.InformativeMessageForEftViewModel"
+                assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="PaidInReferenceInput">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInReferenceInputViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="PaidOutReferenceInput">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidOutReferenceInputViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="SearchCustomerState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.SearchCustomerByAddressViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="SearchCustomerTenderState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.SearchCustomerByAddressViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="SelectablePromotionState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.SelectablePromotionViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="SearchCustomerNoSaleState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+							assemblyName="Retalix.Client.POS.Presentation.Views">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.SearchCustomerByAddressViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="CustomerLookupSummaryNoSaleState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.JumboCustomerLookupSummaryViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="CustomerLookupSummarySaleState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.JumboCustomerLookupSummaryViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="CustomerLookupSummaryTenderState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.JumboCustomerLookupSummaryViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    
+    <State name="PaidInMode">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.Views.CashOfficeView"
+             viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+             name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInViewModel"
+             assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+    </State>
+
+    <State name="PaidOutMode">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.Views.CashOfficeView"
+            viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+            name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidOutViewModel"
+            assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+    </State>
+
+    <State name="SelectStoreAccount_TenderAdd">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.TenderAmountViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.TenderView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.StoreAccount.ViewModels.StoreAccountViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.StoreAccount" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.TenderGroupMenuView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="StoreAccount_FeeVerifyRequired">
+      <ToView name="Retalix.Jumbo.Client.POS.StoreAccount.ViewModels.StoreAccountFeeVerifyViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.StoreAccount">
+        <ToSubView name="Retalix.Jumbo.Client.POS.StoreAccount.Views.StoreAccountFeeVerifyRightView"
+                   assemblyName="Retalix.Jumbo.Client.POS.StoreAccount" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.StoreAccount.Views.StoreAccountFeeVerifyOverrideView"
+                   assemblyName="Retalix.Jumbo.Client.POS.StoreAccount" />
+      </ToView>
+    </State>  
+
+    <State name="StampAddNoSaleMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampNoSaleModeViewModel"
+        assemblyName="Retalix.Jumbo.Client.POS.Stamp">          
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampAddViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />        
+      </ToView>
+    </State> 
+
+    <State name="StampExchangeNoSaleMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampNoSaleModeViewModel"
+        assemblyName="Retalix.Jumbo.Client.POS.Stamp">          
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampExchangeViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />        
+      </ToView>
+    </State>
+
+    <State name="StampBookletExchangeNoSaleMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampNoSaleModeViewModel"
+        assemblyName="Retalix.Jumbo.Client.POS.Stamp">
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.MultipleStampExchangeViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />
+      </ToView>
+    </State>
+
+    <State name="StampAddSaleMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampSaleModeViewModel"
+        assemblyName="Retalix.Jumbo.Client.POS.Stamp">
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampAddViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />
+      </ToView>
+    </State>
+
+    <State name="StampAddTenderMode">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.TenderAmountViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.TenderView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampAddViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.TenderGroupMenuView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="StampAddTenderModeAfterPromotions">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.TenderAmountViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.TenderView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.StampAddViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.TenderGroupMenuView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+    
+
+    <State name="PayByStampsTenderMode">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.TenderAmountViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.TenderView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.Stamp.ViewModels.PayByStampsViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Stamp" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.TenderGroupMenuView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="Refund_SwitchTender">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.SwitchTenderViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="EPSPaymentTenderExchangeState">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.EPSPaymentTenderExchangeViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.EPSTenderExchangeView"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="EPSRefundTenderExchangeState">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.EPSRefundTenderExchangeViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.EPSTenderExchangeView"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+      <State name="EodExecutionMessage">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name=" Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ExtendedEndOfDayExecutionViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="EFT_PaymentAmountState">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EFTAmountViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.TenderView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.EFTAmountView"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.TenderGroupMenuView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="OnlineItemBalanceInqueryState">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.OnlineItemBalanceInquiryViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.ControlRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.OnlineItemBalanceInquiryView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+    
+    <State name="PaidInTypesMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInTypesExtendedViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.PaidInOutSelectAccountView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.ControlRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+    
+    <State name="PaidOutTypesMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidOutTypesExtendedViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.PaidInOutSelectAccountView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.ControlRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="CashExchangeNoSaleMode">
+      <ToView name="Retalix.Jumbo.Client.POS.ATM.ViewModels.CashExchangeViewModel"
+        assemblyName="Retalix.Jumbo.Client.POS.ATM">
+        <ToSubView name="Retalix.Jumbo.Client.POS.ATM.Views.CashExchangeRightView"
+                   assemblyName="Retalix.Jumbo.Client.POS.ATM" />
+        <ToSubView regionName="LeftRegion"
+                  name="Retalix.Jumbo.Client.POS.ATM.Views.CashExchangeView"
+                   assemblyName="Retalix.Jumbo.Client.POS.ATM" />
+      </ToView>
+    </State>
+
+    <State name="CashManagementState">
+      <ToView name="Retalix.Jumbo.Client.POS.ATM.ViewModels.CashManagementMenuExtendedViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.ATM">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.CashManagementMenuActionDetailView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.ATM.Views.CashManagementMenuExtendedView"
+                   assemblyName="Retalix.Jumbo.Client.POS.ATM" />
+      </ToView>
+    </State>
+
+    <State name="ProcessedByAtmChangeMode">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ProcessedByAtmCashPaymentChangeExtendedViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="CashChangerWarningInterventionList">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.RegionContainerViews.MainPosRegionContainerView"
+              viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+              name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.CashChangerWarningInterventionListViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.InterventionListItemsDetailsViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.InterventionListView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.CashChangerWarningInterventionListRightViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+
+    <State name="PaidInWithChangeMode">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.Views.CashOfficeView"
+              viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+              name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInWithChangeViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+    </State>
+
+    <State name="PaidInWithChangeTypesMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInTypesExtendedViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.PaidInOutSelectAccountView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.ControlRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+
+    <State name="PaidInWithChangeReferenceInput">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInWithChangeReferenceInputViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+    
+    <State name="PaidInWithChangeActionMode">
+      <ToView viewName="Retalix.Client.POS.Presentation.Views.RegionContainerViews.MainPosRegionContainerView"
+              viewAssemblyName="Retalix.Client.POS.Presentation.Views"
+              name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInWithChangeActionViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Jumbo.Client.POS.ATM.Views.CashExchangeRightView"
+                   assemblyName="Retalix.Jumbo.Client.POS.ATM" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.ATM.Views.CashExchangeView"
+                   assemblyName="Retalix.Jumbo.Client.POS.ATM" />
+      </ToView>
+    </State>
+
+    <State name="PaidInWithChangeFinishMode">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PaidInWithChangeFinishViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="PostTransactionSearchByBarcodeMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PostTransactionByBarcodeViewModel"
+             assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.RePrintRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.PostTransactionByBarcodeView"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+
+	  <State name="ServerConfigurationInput">
+		  <ToView viewName="Retalix.Jumbo.Client.POS.Presentation.Views.Views.ServerConfigurationInputView"
+			 viewAssemblyName="Retalix.Jumbo.Client.POS.Presentation.Views"
+			 name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ServerConfigurationInputViewModel"
+			 assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" >
+		  </ToView>
+	  </State>
+	  
+	  <State name="ServerConfigurationLookup">
+		  <ToView viewName="Retalix.Jumbo.Client.POS.Presentation.Views.Views.ServerConfigurationView"
+			 viewAssemblyName="Retalix.Jumbo.Client.POS.Presentation.Views"
+			 name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ServerConfigurationViewModel"
+			 assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+	  </State>
+	  
+    <State name="PostTransactionPOSParametersSearchMode">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PostTransactionPosParametersSearchViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.RePrintRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.ManualSearchTransactionParametersEntryView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+
+    <State name="MultiplePostTransactionLookupSuccessState">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PostTransactionSelectionViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.RePrintRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.PostTransactionSelectionView"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State> 
+
+    <State name="ShowOriginalPostTransactionState">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PostTransactionOriginalTransactionViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.PostTransactionScanLoyaltyCardRightView"
+                    assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.PostTransactionOriginalTransactionView"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+
+    <State name="PostTransactionMessageState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.PostTransactionMessageViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="SelectablePromotionCLLState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.SelectablePromotionFromCLLViewModel"
+                assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+      </ToWindow>
+    </State>
+
+    <State name="AddCustomerState">
+      <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.AddCustomerExtendedViewModel"
+              assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.ControlRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.AddCustomerView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+
+    <State name="RePrintTransactionManualEntryMode">
+      <ToView name=" Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.RePrintTransactionManualEntryExtendedViewModel"
+              assemblyName=" Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.RePrintRightView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Client.POS.Presentation.Views.Views.ManualSearchTransactionParametersEntryView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="RightRegionBottom"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.ConsumableGroupViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+	  
+	<State name="NoSaleMode_ItemNotFound">
+		<ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+					assemblyName="Retalix.Client.POS.Presentation.Views"
+					cacheMode="false">
+			<ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ItemNotFoundErrorConfigurableCommandsExtendedViewModel"
+					assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+		</ToWindow>
+	</State>
+	
+	<State name="SaleMode_ItemNotFound">
+		<ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+					assemblyName="Retalix.Client.POS.Presentation.Views"
+					cacheMode="false">
+			<ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ItemNotFoundErrorConfigurableCommandsExtendedViewModel"
+					assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+		</ToWindow>
+	</State>
+
+    <State name="VoidTenderDispenseChangeState">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.DispenseChangeMainViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.DispenseChangeExtendedViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+        <ToSubView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.LineDetailsViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.DisabledItemDetailsRightViewModel"
+                   assemblyName="Retalix.Client.POS.Presentation.ViewModels" />
+      </ToView>
+    </State>
+
+    <State name="BuyingStampsPaymentMode">
+      <ToView name="Retalix.Client.POS.Presentation.ViewModels.ViewModels.TenderAmountViewModel"
+              assemblyName="Retalix.Client.POS.Presentation.ViewModels">
+        <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.TenderView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+        <ToSubView regionName="LeftRegion"
+                   name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.BuyingStampsPaymentViewModel"
+                   assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+        <ToSubView regionName="RightRegionTop"
+                   name="Retalix.Client.POS.Presentation.Views.Views.TenderGroupMenuView"
+                   assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToView>
+    </State>
+
+    <State name="BuyingStampsPayment_PleaseWaitState">
+      <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+                assemblyName="Retalix.Client.POS.Presentation.Views"
+                cacheMode="false">
+        <ToView name="Retalix.Client.POS.Presentation.Views.Controls.UCPleaseWait"
+                assemblyName="Retalix.Client.POS.Presentation.Views" />
+      </ToWindow>
+    </State>
+
+	  <State name="BuyingStampsScanDigitalBarcodeState">
+		  <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.BuyingStampsScanDigitalBarcodeViewModel"
+		          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+			  <ToSubView name="Retalix.Client.POS.Presentation.Views.Views.ControlRightView"
+			             assemblyName="Retalix.Client.POS.Presentation.Views" />
+			  <ToSubView regionName="LeftRegion"
+			             name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.BuyingStampsScanDigitalBarcodeView"
+			             assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+		  </ToView>
+	  </State>
+
+	  <State name="CarLookup">
+		  -->
+		  <!--   <ToView viewName="NCR.EG.Client.POS.Views.GraphicsCustomerDisplay.PosLoginRegionContainerView" -->
+		  <!--           viewAssemblyName="NCR.EG.Client.POS.Views.GraphicsCustomerDisplay" -->
+		  <!--           name="Retalix.Client.POS.Presentation.ViewModels.GraphicsCustomerDisplay.ViewModels.GraphicsCustomerDisplayViewModel" -->
+		  <!--           assemblyName="Retalix.Client.POS.Presentation.ViewModels.GraphicsCustomerDisplay" > -->
+		  <!--     <ToSubView regionName="SubViewBottom" -->
+		  <!--                name="NCR.EG.Client.POS.Views.GraphicsCustomerDisplay.LaneCloseView" -->
+		  <!--                assemblyName="NCR.EG.Client.POS.Views.GraphicsCustomerDisplay"/> -->
+		  <!--     <ToSubView regionName="SubViewTop" -->
+		  <!--                name="Retalix.Client.POS.Presentation.Views.GraphicsCustomerDisplay.Views.PosDetailsViewLogin" -->
+		  <!--                assemblyName="Retalix.Client.POS.Presentation.Views.GraphicsCustomerDisplay"/> -->
+		  <!--   </ToView> -->
+		  <!-- </State> -->
+
+	  <State name="BuyingStampsTenderExchangeState">
+		  <ToView name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.BuyingStampsTenderExchangeViewModel"
+		          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels">
+			  <ToSubView name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.BuyingStampsTenderExchangeRightView"
+			             assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+			  <ToSubView regionName="LeftRegion"
+			             name="Retalix.Jumbo.Client.POS.Presentation.Views.Views.BuyingStampsTenderExchangeView"
+			             assemblyName="Retalix.Jumbo.Client.POS.Presentation.Views" />
+		  </ToView>
+	  </State>
+
+	  <State name="BuyingStampsScanDigitalBarcode_PleaseWaitState">
+		  <ToWindow name="Retalix.Client.POS.Presentation.Views.Windows.TransparentWindow"
+		            assemblyName="Retalix.Client.POS.Presentation.Views"
+		            cacheMode="false">
+			  <ToView name="Retalix.Client.POS.Presentation.Views.Controls.UCPleaseWait"
+			          assemblyName="Retalix.Client.POS.Presentation.Views" />
+		  </ToWindow>
+	  </State>
+
+  </StateToViews>
+  
+  <Views>
+
+    <View id="EPSMessageView"
+          regionName="LeftRegion"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EPSMessageViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="EPSRecoveryOptionsView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EPSRecoveryOptionsViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="EPSStartRecoveryView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EPSStartRecoveryViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="EPSReconciliationSuccessView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EPSReconciliationSuccessViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="EPSReconciliationFailureView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.EPSReconciliationFailureViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="CashbackAmountEntryPromptView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.CashbackViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels"
+          regionName="LeftRegion"/>
+    
+    
+    <View id="CustomerDetailsView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.ExtendedCustomerViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="CustomerAgeWithOptionalDateInput"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.AgeRestrictionInputExtendedViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="CustomerAgeInput"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.AgeRestrictionWithNoDateInputExtendedViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="CustomerAgeReasonCodeInput"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.AgeRestrictionWithReasonCodeInputExtendedViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="AgeRestrictionVoidedItemsView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.VoidedItemsByRestrictionConfirmationExtendedViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels" />
+
+    <View id="CashExchangeView"
+      name="Retalix.Jumbo.Client.POS.ATM.Views.CashExchangeView"
+      assemblyName="Retalix.Jumbo.Client.POS.ATM" />
+
+    <View id="EnableableOptionsSelectionMessageView"
+          name="Retalix.Jumbo.Client.POS.Presentation.ViewModels.ViewModels.OptionsSelectionMessageExtendedViewModel"
+          assemblyName="Retalix.Jumbo.Client.POS.Presentation.ViewModels"/>
+  </Views>
+  
+</ViewNavigationRules>

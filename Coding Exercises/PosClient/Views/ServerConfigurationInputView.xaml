@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Retalix.Jumbo.Client.POS.Presentation.Views.Views.ServerConfigurationInputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:localization="clr-namespace:Retalix.Client.Presentation.Core.Localization;assembly=Retalix.Client.Presentation.Core"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid >
+        <TextBlock HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   FontSize="20"
+                   FontStyle="Normal"
+                   Margin="20,100,20,0"
+                   
+                   Grid.Row="1">Enter Server Configuration Id</TextBlock>
+        <TextBox Grid.Row="2"
+                 x:Name="SearchTextBox"
+                 HorizontalAlignment="Stretch"
+                 VerticalAlignment="Center"
+                 Margin="40,0,45,0"
+                 Padding="10,0"
+                 Background="Aquamarine"
+                 Text="{Binding ServerConfigurationName, UpdateSourceTrigger=PropertyChanged}" />
+        <Button
+            Grid.Row="3"
+            x:Name="GetDetailsButton"
+                Content="{localization:Translate Default=Get Details}"
+                Command="{Binding GetCommand}"
+                DockPanel.Dock="Right"
+                VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+                Margin="0,0,15,0"
+                Width="120"
+                Height="42" />
+        <Button
+            Grid.Row="2"
+            x:Name="BackButton"
+            Content="{localization:Translate Default=Back}"
+            Command="{Binding BackCommand}"
+            DockPanel.Dock="Right"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0,0,0,0"
+            Width="120"
+            Height="42" />
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns="http://retalix.com/R10/services"
+		   targetNamespace="http://retalix.com/R10/services"
+		   elementFormDefault="qualified"
+		   attributeFormDefault="unqualified">
+	<xs:include schemaLocation="../../../../Libs/Retalix/StoreServer/Schemas/Common/RetalixCommonHeader.xsd"/>
+	<xs:include schemaLocation="ServerConfigurationType.xsd"/>
+	<xs:element name="ServerConfigurationLookupRequest" type="ServerConfigurationLookupRequestType"/>
+	<xs:element name="ServerConfigurationLookupResponse" type="ServerConfigurationLookupResponseType"/>
+	
+	<xs:complexType name="ServerConfigurationLookupRequestType">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="SearchCriteria" type="SearchCriteriaType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SearchCriteriaType">
+		<xs:sequence>
+			<xs:element name="ServerConfigurationId" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="ServerConfigurationLookupResponseType">
+		<xs:sequence>
+			<xs:element name="Header" type="RetalixCommonHeaderType"/>
+			<xs:element name="ServerConfigurations" type="ServerConfigurationType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

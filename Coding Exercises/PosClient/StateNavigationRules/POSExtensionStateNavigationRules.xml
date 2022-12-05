@@ -1,0 +1,1054 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ExtensionNavigationRules touchPointType="POS">
+
+  <NavigationRule>
+    <FromState>WelcomeScreen</FromState>
+    <NavigationCase>
+      <FromOutcome>EftPaymentCanceledByError</FromOutcome>
+      <ToState>TenderModeEftPaymentCanceledByErrorState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>WelcomeScreen</FromState>
+    <NavigationCase>
+      <FromOutcome>EftRefundCanceledByError</FromOutcome>
+      <ToState>EftRecoveryRefundCanceledByErrorState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>EftRecoveryRefundCanceledByErrorState</FromState>
+    <NavigationCase>
+      <FromOutcome>GoBack</FromOutcome>
+      <ToState>ReturnTransactionSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CustomerLookupSummarySaleState</FromState>
+    <NavigationCase>
+      <FromOutcome>CustomerAddSuccess</FromOutcome>
+      <ToState>SaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CustomerLookupSummaryTenderState</FromState>
+    <NavigationCase>
+      <FromOutcome>CustomerAddSuccess</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SearchCustomerNoSaleState</FromState>
+    <NavigationCase>
+      <FromOutcome>CustomerLookupByAddressSuccess</FromOutcome>
+      <ToState>CustomerLookupSummaryNoSaleState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>SearchCustomer</FromOutcome>
+      <ToState>SearchCustomerTenderState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SearchCustomerState</FromState>
+    <NavigationCase>
+      <FromOutcome>CustomerLookupByAddressSuccess</FromOutcome>
+      <ToState>CustomerLookupSummarySaleState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SearchCustomerTenderState</FromState>
+    <NavigationCase>
+      <FromOutcome>CustomerLookupByAddressSuccess</FromOutcome>
+      <ToState>CustomerLookupSummaryTenderState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>SelectablePromotionState</FromOutcome>
+      <ToState>SelectablePromotionState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SelectablePromotionState</FromState>
+    <NavigationCase>
+      <FromOutcome>GetPaymentOptionsSuccess</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SelectablePromotionState</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddTenderMode</FromOutcome>
+      <ToState>StampAddTenderModeAfterPromotions</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddTenderModeAfterPromotions</FromState>
+    <NavigationCase>
+      <FromOutcome>GoBack</FromOutcome>
+      <ToState>SaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddTenderModeAfterPromotions</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSaleMode</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CustomerLookupSummarySaleState</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>SaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CustomerLookupSummaryTenderState</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>Refund_EftWaiting</FromState>
+    <NavigationCase>
+      <FromOutcome>MultiPaybackOptionFound</FromOutcome>
+      <ToState>ReturnTransactionSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>WelcomeScreen</FromState>
+    <NavigationCase>
+      <FromOutcome>MultiPaybackOptionFound</FromOutcome>
+      <ToState>ReturnTransactionSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToPaidInReferenceInput</FromOutcome>
+      <ToState>PaidInReferenceInput</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>PaidIn_PleaseWaitState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>GoBack</FromOutcome>
+      <ToState>PaidInMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidOutMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToPaidOutReferenceInput</FromOutcome>
+      <ToState>PaidOutReferenceInput</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidOutReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>PaidOut_PleaseWaitState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidOutReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>GoBack</FromOutcome>
+      <ToState>PaidOutMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>*</FromState>
+    <NavigationCase>
+      <FromOutcome>StoreAccountTenderSelect</FromOutcome>
+      <ToState>SelectStoreAccount_TenderAdd</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>*</FromState>
+    <NavigationCase>
+      <FromOutcome>StoreAccountFeeSelect</FromOutcome>
+      <ToState>StoreAccount_FeeVerifyRequired</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StoreAccount_FeeVerifyRequired</FromState>
+    <NavigationCase>
+      <FromOutcome>OpenPriceSuccess</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>GetAmountTenderExchange</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>\</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <!--Stamp Add Start-->
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddNoSaleMode</FromOutcome>
+      <ToState>StampAddNoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddNoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToNoSaleMode</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddNoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSaleMode</FromOutcome>
+      <ToState>SaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddSaleMode</FromOutcome>
+      <ToState>StampAddSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSaleMode</FromOutcome>
+      <ToState>SaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddTenderMode</FromOutcome>
+      <ToState>StampAddTenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddTenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToTenderMode</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderExchangePurchaseMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampTenderExchange</FromOutcome>
+      <ToState>StampExchangeNoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampTenderExchange</FromOutcome>
+      <ToState>StampExchangeNoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderExchangePurchaseMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampBookletTenderExchange</FromOutcome>
+      <ToState>StampBookletExchangeNoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampBookletTenderExchange</FromOutcome>
+      <ToState>StampBookletExchangeNoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampExchangeNoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddNoSaleMode</FromOutcome>
+      <ToState>CashPaymentMode_Change</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampExchangeNoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToNoSaleMode</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampBookletExchangeNoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToNoSaleMode</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PayByStampsSelect</FromOutcome>
+      <ToState>PayByStampsTenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>ReturnAllTransactionByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSearchTransactionOptions</FromOutcome>
+      <ToState>ReturnAllTransactionPOSParametersSearchMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TransacionBasedReturnSearchByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSearchTransactionOptions</FromOutcome>
+      <ToState>TransactionBasedReturnPOSParametersSearchMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>RePrintTransactionByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToReprintTransactionSearchOptions</FromOutcome>
+      <ToState>RePrintTransactionManualEntryMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddTenderMode</FromOutcome>
+      <ToState>StampAddTenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampAddTenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToTenderMode</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>AutoTransactionFinishTransactionNotFinished</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CashExchangeNoSaleMode</FromOutcome>
+      <ToState>CashExchangeNoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>HardwareErrorsList</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>..</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToCashChangerWarningInterventionList</FromOutcome>
+      <ToState>CashChangerWarningInterventionList</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>CashChangerWarningInterventionList</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>FinishTransactionSuccessWithSellable</FromOutcome>
+      <ToState>CashPaymentMode_Change</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>FinishTransactionSuccessWithSellable</FromOutcome>
+      <ToState>CashPaymentMode_Change</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+		<FromState>SelectablePromotionState</FromState>
+		<NavigationCase>
+			<FromOutcome>FinishTransactionSuccessWithSellable</FromOutcome>
+			<ToState>CashPaymentMode_Change</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CashManagementState</FromOutcome>
+      <ToState>CashManagementState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CashManagementState</FromOutcome>
+      <ToState>CashManagementState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInWithChange</FromOutcome>
+      <ToState>PaidInWithChangeTypesMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>OneAccountPaidInWithChangeStatus</FromOutcome>
+      <ToState>PaidInWithChangeTypesMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeTypesMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInMode</FromOutcome>
+      <ToState>PaidInWithChangeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToPaidInReferenceInput</FromOutcome>
+      <ToState>PaidInWithChangeReferenceInput</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>PaidInWithChange_PleaseWaitState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>GoBack</FromOutcome>
+      <ToState>PaidInWithChangeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeReferenceInput</FromState>
+    <NavigationCase>
+      <FromOutcome>ReferenceInputAvailable</FromOutcome>
+      <ToState>PaidInWithChangeActionMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChange_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>CashOfficeNoDrawer</FromOutcome>
+      <ToState>PaidInWithChangeActionMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChange_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInSuccess</FromOutcome>
+      <ToState>CashDrawerOpenMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CashDrawerOpen</FromOutcome>
+      <ToState>CashDrawerOpenMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChange_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInFailed</FromOutcome>
+      <ToState>PaidInWithChangeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInWithChangeCancel</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CloseView</FromOutcome>
+      <ToState>PaidInWithChangeFinishMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>PaidInWithChangeActionMode_PleaseWaitState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>PaidInWithChangeFinishMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInSuccess</FromOutcome>
+      <ToState>PaidInWithChangeFinishMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>CashOfficeNoDrawer</FromOutcome>
+      <ToState>PaidInWithChangeFinishMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeActionMode_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInFailed</FromOutcome>
+      <ToState>PaidInWithChangeActionMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeFinishMode</FromState>
+    <NavigationCase>
+      <FromOutcome>ShowChangePopup</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeFinishMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PaidInOutProcessFinished</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeFinishMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeFinishMode</FromState>
+    <NavigationCase>
+      <FromOutcome>DrawerClosedSuccess</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PaidInWithChangeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>DrawerOpenSuccess</FromOutcome>
+      <ToState>PaidInWithChangeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>AddCustomerState</FromState>
+    <NavigationCase>
+      <FromOutcome>SelectablePromotionState</FromOutcome>
+      <ToState>SelectablePromotionState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>AddCustomerState</FromState>
+    <NavigationCase>
+      <FromOutcome>FinishTransactionSuccessWithSellable</FromOutcome>
+      <ToState>CashPaymentMode_Change</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>AddCustomerState</FromState>
+    <NavigationCase>
+      <FromOutcome>FinishTransactionSuccess</FromOutcome>
+      <ToState>CashPaymentMode_Change</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>NoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToPostTransactionSearchByBarcodeState</FromOutcome>
+      <ToState>PostTransactionSearchByBarcodeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionSearchByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToNoSaleMode</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionSearchByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToSearchPostTransactionOptions</FromOutcome>
+      <ToState>PostTransactionPOSParametersSearchMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionPOSParametersSearchMode</FromState>
+    <NavigationCase>
+      <FromOutcome>MultipleTransactionLookupSuccess</FromOutcome>
+      <ToState>MultiplePostTransactionLookupSuccessState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>MultiplePostTransactionLookupSuccessState</FromState>
+    <NavigationCase>
+      <FromOutcome>GetRetailTransactionLogSuccess</FromOutcome>
+      <ToState>ShowOriginalPostTransactionState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionPOSParametersSearchMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GetRetailTransactionLogSuccess</FromOutcome>
+      <ToState>ShowOriginalPostTransactionState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionSearchByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>GetRetailTransactionLogSuccess</FromOutcome>
+      <ToState>ShowOriginalPostTransactionState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>ShowOriginalPostTransactionState</FromState>
+    <NavigationCase>
+      <FromOutcome>CancelPostTransaction</FromOutcome>
+      <ToState>PostTransactionSearchByBarcodeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionPOSParametersSearchMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CancelPostTransaction</FromOutcome>
+      <ToState>PostTransactionSearchByBarcodeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>MultiplePostTransactionLookupSuccessState</FromState>
+    <NavigationCase>
+      <FromOutcome>CancelPostTransaction</FromOutcome>
+      <ToState>PostTransactionSearchByBarcodeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionSearchByBarcodeMode</FromState>
+    <NavigationCase>
+      <FromOutcome>CancelPostTransaction</FromOutcome>
+      <ToState>PostTransactionSearchByBarcodeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>ShowOriginalPostTransactionState</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToPostTransactionSearchByBarcodeState</FromOutcome>
+      <ToState>PostTransactionSearchByBarcodeMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>ShowOriginalPostTransactionState</FromState>
+    <NavigationCase>
+      <FromOutcome>NoEarnedPoints</FromOutcome>
+      <ToState>PostTransactionMessageState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>ShowOriginalPostTransactionState</FromState>
+    <NavigationCase>
+      <FromOutcome>EarnedPointsSuccess</FromOutcome>
+      <ToState>PostTransactionMessageState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PostTransactionMessageState</FromState>
+    <NavigationCase>
+      <FromOutcome>GoToNoSaleMode</FromOutcome>
+      <ToState>NoSaleMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+  
+  <NavigationRule>
+    <FromState>AddCustomerState</FromState>
+    <NavigationCase>
+      <FromOutcome>StampAddTenderMode</FromOutcome>
+      <ToState>StampAddTenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PreEftGeneralWaitingMode</FromState>
+    <NavigationCase>
+      <FromOutcome>SelectablePromotionCLLState</FromOutcome>
+      <ToState>SelectablePromotionCLLState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PreEftGeneralWaitingMode</FromState>
+    <NavigationCase>
+      <FromOutcome>FinishTransactionSuccess</FromOutcome>
+      <ToState>CashPaymentMode_Change</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>AddLoan_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>*</FromState>
+    <NavigationCase>
+      <FromOutcome>GetPurchaseTenderExchangeSucess</FromOutcome>
+      <ToState>TenderExchangePurchaseMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>PreEftGeneralWaitingMode</FromState>
+    <NavigationCase>
+      <FromOutcome>TenderNotAvailableState</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>StampBookletExchangeNoSaleMode</FromState>
+    <NavigationCase>
+      <FromOutcome>TenderExchangeRefundMode</FromOutcome>
+      <ToState>TenderExchangeRefundMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>TenderMode</FromState>
+    <NavigationCase>
+      <FromOutcome>BuyingStampsPaymentState</FromOutcome>
+      <ToState>BuyingStampsPaymentMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>BuyingStampsPaymentMode</FromState>
+    <NavigationCase>
+      <FromOutcome>AuthorizeBuyingStampsSuccess</FromOutcome>
+      <ToState>*</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>BuyingStampsPaymentMode</FromState>
+    <NavigationCase>
+      <FromOutcome>AuthorizeBuyingStampsError</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>BuyingStampsPaymentMode</FromState>
+    <NavigationCase>
+      <FromOutcome>PleaseWait</FromOutcome>
+      <ToState>BuyingStampsPayment_PleaseWaitState</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>BuyingStampsPayment_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>AuthorizeBuyingStampsSuccess</FromOutcome>
+      <ToState>BuyingStampsPaymentMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>BuyingStampsPayment_PleaseWaitState</FromState>
+    <NavigationCase>
+      <FromOutcome>AuthorizeBuyingStampsError</FromOutcome>
+      <ToState>TenderMode</ToState>
+    </NavigationCase>
+  </NavigationRule>
+  <NavigationRule>
+	  <FromState>*</FromState>
+	  <NavigationCase>
+		  <FromOutcome>CancelSaveTransaction</FromOutcome>
+		  <ToState>@</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+	  <FromState>NoSaleMode</FromState>
+	  <NavigationCase>
+		  <FromOutcome>BuyingStampsScanDigitalBarcodeMode</FromOutcome>
+		  <ToState>BuyingStampsScanDigitalBarcodeState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsScanDigitalBarcodeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>BuyingStampsPaymentMode</FromOutcome>
+		  <ToState>BuyingStampsPaymentMode</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsScanDigitalBarcodeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>BuyingStampsTenderExchangeMode</FromOutcome>
+		  <ToState>BuyingStampsTenderExchangeState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsScanDigitalBarcodeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>PleaseWait</FromOutcome>
+		  <ToState>BuyingStampsScanDigitalBarcode_PleaseWaitState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsScanDigitalBarcode_PleaseWaitState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>AuthorizeBuyingStampsSuccess</FromOutcome>
+		  <ToState>BuyingStampsTenderExchangeState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsTenderExchangeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>BuyingStampsScanDigitalBarcodeState</FromOutcome>
+		  <ToState>BuyingStampsScanDigitalBarcodeState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+	<NavigationRule>
+		<FromState>BuyingStampsScanDigitalBarcodeState</FromState>
+		<NavigationCase>
+			<FromOutcome>GoToNoSaleMode</FromOutcome>
+			<ToState>NoSaleMode</ToState>
+		</NavigationCase>
+	</NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsTenderExchangeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>CloseView</FromOutcome>
+		  <ToState>BuyingStampsScanDigitalBarcodeState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsTenderExchangeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>AddBuyingStampsRedemptionError</FromOutcome>
+		  <ToState>*</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsTenderExchangeState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>TenderExchangeRefundMode</FromOutcome>
+		  <ToState>TenderExchangeRefundMode</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>BuyingStampsScanDigitalBarcode_PleaseWaitState</FromState>
+	  <NavigationCase>
+		  <FromOutcome>AuthorizeBuyingStampsError</FromOutcome>
+		  <ToState>BuyingStampsScanDigitalBarcodeState</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+	  <FromState>NoSaleMode</FromState>
+	  <NavigationCase>
+		  <FromOutcome>DigitalStampsTrainingModeError</FromOutcome>
+		  <ToState>NoSaleMode</ToState>
+	  </NavigationCase>
+  </NavigationRule>
+
+  <NavigationRule>
+    <FromState>SelectablePromotionState</FromState>
+    <NavigationCase>
+      <FromOutcome>SelectablePromotionState</FromOutcome>
+      <ToState>AddPromotionItemReward</ToState>
+    </NavigationCase>
+  </NavigationRule>
+
+    <NavigationRule>
+	    <FromState>NoSaleMode</FromState>
+	    <NavigationCase>
+		    <FromOutcome>ServerConfigurationInputOutcome</FromOutcome>
+		    <ToState>ServerConfigurationInput</ToState>
+	    </NavigationCase>
+    </NavigationRule>
+
+    <NavigationRule>
+	    <FromState>ServerConfigurationInput</FromState>
+	    <NavigationCase>
+		    <FromOutcome>ServerConfigurationLookupOutcome</FromOutcome>
+		    <ToState>ServerConfigurationLookup</ToState>
+	    </NavigationCase>
+    </NavigationRule>
+
+    <NavigationRule>
+	    <FromState>ServerConfigurationLookup</FromState>
+	    <NavigationCase>
+		    <FromOutcome>ServerConfigurationBackOutcome</FromOutcome>
+		    <ToState>ServerConfigurationInput</ToState>
+	    </NavigationCase>
+    </NavigationRule>
+
+
+    <NavigationRule>
+	    <FromState>ServerConfigurationInput</FromState>
+	    <NavigationCase>
+		    <FromOutcome>ServerConfigurationBackOutcome</FromOutcome>
+		    <ToState>NoSaleMode</ToState>
+	    </NavigationCase>
+    </NavigationRule>
+</ExtensionNavigationRules>
